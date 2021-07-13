@@ -1,0 +1,338 @@
+@font-face{
+    font-family: "roboto";
+    src: url(../fonts/Roboto-Light.ttf);
+    font-display: swap;
+}
+
+@font-face{
+    font-family: "inconsolata";
+    src: url(../fonts/Inconsolata-Medium.ttf);
+    font-display: swap;
+}
+
+
+@keyframes wiggle{
+    0% { transform: rotate(0deg); }
+    60% { transform: rotate(0deg); }
+    65% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    80% { transform: rotate(0deg); }    
+}
+
+@keyframes playRaptor {
+    100% { background-position: -900px; }
+}
+
+:root{
+    --bg-color: #EEF5DB;
+    --nav-hover: #FFA987;
+    --footer-color: #263D42;
+    --hamburger-color: #263D42;
+}
+
+body{
+    margin-top: 15px;
+    font-family: "roboto", sans-serif;
+    background-color: var(--bg-color);
+}
+
+h1{
+    font-size: 3em;
+    margin-top:.5em;
+    margin-bottom:.2em;
+    font-family: "inconsolata", serif;
+}
+
+#menu{
+    transform-origin: 0% 0%;
+    
+}
+
+/* hamburger */
+nav span{
+    display: none;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 8px;
+    position: relative;
+    
+    background: var(--hamburger-color);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 3px;
+}
+
+nav input:checked ~ #menu{
+    transform: none;
+    transition: transform .3s ease-in-out;
+    position:relative
+}
+
+
+
+
+nav input{
+    position:absolute;
+    top: 10px;
+    left: 2px;
+    width: 40px;
+    height:27px;
+    -webkit-touch-callout: none; 
+    display: none; 
+    z-index: 2;
+    opacity:0;
+}
+
+#menu a{
+    justify-content: space-between;
+    margin:5px;
+    padding:0;
+    color:black;
+    font-size: 32px;
+}
+
+#menu a:hover, footer a:hover{
+    color: var(--nav-hover);
+    transition: color .4s ease;
+}
+#contact-container{
+    text-align: center;
+}
+#contactForm{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align:center;
+}
+#contactForm textarea{
+    width: 50%;
+}
+
+footer{
+    line-height: 1.7;
+    color: var(--footer-color);
+}
+
+footer a {
+    color: var(--footer-color);
+}
+
+.page-title{
+    text-align: center;
+}
+
+.flex-container{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+.flex-top{
+    align-self: flex-start;
+    height: 600px;
+    width: 50%;
+}
+
+.flex-bot{
+    align-self: flex-end;
+    height: 50px;
+    width:50%;
+}
+
+.flex-bot a{
+    text-decoration: none;
+}
+
+.social-links{
+    position: relative;
+    float:right;
+
+}
+
+figure{
+    margin:0;
+}
+
+#about{
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 10px;
+    max-width: 50%;
+}
+
+#lock-room{
+    display:none;
+}
+
+#lock-icon{
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    position:relative;
+    width:20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    animation:wiggle 2.5s infinite;
+}
+
+#lock-check{
+    position:absolute;
+    top: 20%;
+    left: 35%;
+    width: 30%;
+    height: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    -webkit-touch-callout: none; 
+    z-index: 2;
+    opacity:0;
+}
+#lock-check:checked{
+    transform: translate(-1020%, 0);
+}
+#lock-check:checked ~ #lock-room{
+    display:block;
+}
+
+#lock-check:checked ~ #lock-icon{
+    display:none;
+}
+
+#lock-check:checked ~ #lock-footer{
+    display:none;
+}
+
+.raptor {
+    position: relative;
+    display:block;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+    width: 150px;
+    height: 100px;
+    /* no longer have the SVG file, must use webp sprite sheet instead :( */
+    background: url('../images/Spritesheet_Raptor.webp') left center;
+    animation: playRaptor .5s  steps(6) infinite;
+}
+  
+#project-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 310px 1fr 1fr;
+    gap: 0px 0px;
+    grid-column-gap: 30px;
+    grid-row-end: span;
+    grid-template-areas:
+      "project-1 project-1 project-1 project-1"
+      "project-2 project-2 project-2 project-2"
+      "project-3 project-3 project-3 project-3";
+    
+  }
+  
+#project-1 { grid-area: project-1; text-align: center; }
+  
+#project-2 { grid-area: project-2; text-align: center; display: block;}
+  
+#project-3 { grid-area: project-3; text-align: center; }
+
+#hobby-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 30px 0px;
+    grid-column-gap: 30px;
+    grid-template-areas:
+        "hobby1 hobby1 hobby1 hobby1"
+        "hobby2 hobby2 hobby3 hobby3";
+}
+
+#hobby1 { grid-area: hobby1; text-align: center; }
+
+#hobby2 { grid-area: hobby2; text-align: center; }
+
+#hobby2 ul{
+    display: table;
+    margin: 0 auto;
+
+}
+
+#hobby3 { grid-area: hobby3; text-align: center;}
+
+#hobby3 .center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* tablets */
+@media screen and (max-width: 1024px){
+    nav a, nav span, nav input{
+        display: block;
+    }
+    
+    #menu{
+        transform: translate(-120%, 0);
+        position:absolute;
+        background-color: var(--bg-color);
+    }
+
+    iframe{
+        width:400px; 
+        height:315px;
+    }
+
+    .social-links{
+        width:50px;
+    }
+
+    .social-links img{
+        width: 50px;
+        height: auto;
+    }
+
+    .flex-bot{
+        height: 210px;
+    }
+
+    #lock-check{
+        top: 0%;
+    }
+
+    
+    #nav-check:checked ~ #lock-check{
+        display:none
+    }
+
+}
+
+
+
+/* phone */
+@media screen and (max-width: 480px){
+    nav a, nav span, input{
+        display: block;
+    }
+
+    .social-links{
+        width:30px;
+    }
+
+    .social-links img{
+        width: 30px;
+    }
+
+    iframe{
+        width:340px; 
+        height:315px;
+    }
+
+    .flex-bot{
+        height: 130px;
+    }
+
+}

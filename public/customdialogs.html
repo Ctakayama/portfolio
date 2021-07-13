@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="native dialogs" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>customdialogs</title>
+        <script type="text/javascript" src="./js/customdialog.js"></script>
+        <script type="text/javascript" src="./js/purify.min.js"></script>
+        
+    </head>
+    <body>
+        <a href = "./nativedialogs.html"> link to part 1</a><br><br>
+
+        <button id = "customAlert">Alert</button>
+        <button id = "customConfirm">Confirm</button>
+        <button id = "customPrompt">Prompt</button>
+        <button id = "customSafePrompt">Safer Prompt</button>
+
+        <hr>
+
+        <output id = "eventOutput"></output>
+
+        <dialog id = "alertDialog" class = "center" style = "text-align: center;">
+            Alert Pressed! <br><br> 
+            <form>
+                <button value="cancel">Ok</button>
+            </form>
+        </dialog>
+
+        <dialog id = "confirmDialog" class = "right" style = "text-align: right;">
+            Do you Confirm This? <br><br> 
+                <button onclick="setConfirm(false)">cancel</button>
+                <button onclick="setConfirm(true)">Ok</button>
+        </dialog>
+
+        <dialog id = "promptDialog" class = "right" style = "text-align: left;">
+            What is your name?<br>
+                <input id = "promptInput" type = "text" style = "width:30em"/><br><br> 
+                <button onclick="setPrompt(false)">cancel</button>
+                <button onclick="setPrompt(true)">Ok</button>
+        </dialog>
+
+
+        
+    </body>
+</html>

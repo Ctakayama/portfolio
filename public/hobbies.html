@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="list of hobbies for Cole Takayama" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>hobbies</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CM5C9F18C"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CM5C9F18C');
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+
+            <nav class = "navbar">
+                <!-- hamburger  -->
+                <label style = "display: none;">hamburger
+                <input type="checkbox"></label>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id = "menu">
+                    <a href="index.html"><b>Cole Takayama</b></a>
+                    <a href="hobbies.html">hobbies</a>
+                    <a href="projects.html">projects</a>
+                    <a href="contact.html">contact</a>
+                </div>
+
+            </nav>
+        </header>
+
+
+            <h1 class = "page-title">hobbies</h1>
+            <div id = "hobby-grid">
+                <div id ="hobby1">
+                    <h2>I Run a YouTube Channel</h2>
+                    <p>I began my channel, <em>Gibber Rish</em> making animations and parody videos. They've gotten quite popular!</p>
+                    
+                    <h3>Real-Time Channel Statistics</h3>
+                    <div id = "subCount"></div><br>
+                    <iframe width="480" height="315" title = "youtube gibber rish"src="https://www.youtube.com/embed/F-6A0WJDkNo" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div id ="hobby2">
+                <h2>Avid Movie Buff</h2>
+                <p>My favorite films in no particular order are:</p>
+                <ul>
+                    <li><i>2001: A Space Odyssey</i></li>
+                    <li><i>Blade Runner: 2049</i></li>
+                    <li><i>La La Land</i></li>
+                    <li><i>Alien</i></li>
+                    <li><i>Birdman</i></li>
+                </ul>
+                </div>
+                <div id ="hobby3">
+                <h2>Pro Gamer</h2>
+                <p>Here is a table of the games I play and the platforms they are on:</p>
+                <table class = "center">
+                    <caption> Games I Play</caption>
+                    <colgroup>
+                        <col span="1" class = "game">
+                        <col span="1" class = "platform">
+                    </colgroup>
+                    <tr>
+                    <th>Game</th>
+                    <th>Platform</th>
+                    </tr>
+                    <tr>
+                    <td>TeamFight Tactics</td>
+                    <td>PC</td>
+                    </tr>
+                    <tr>
+                    <td>Fate Grand Order</td>
+                    <td>Android</td>
+                    </tr>
+                    <tr>
+                    <td>Genshin Impact</td>
+                    <td>PC</td>
+                    </tr>
+                </table>
+                </div>
+            </div>
+
+
+        <footer>
+            <hr>
+            © 2021 Cole Takayama <br>
+
+            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
+            <code> made with pure HTML & CSS </code> 
+            <br>
+        </footer>
+
+        <script type="text/javascript" src="./js/youtubeStats.js"></script>
+    </body>
+
+</html>

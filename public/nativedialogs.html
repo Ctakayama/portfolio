@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="native dialogs" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>nativedialogs</title>
+        <script type="text/javascript" src="./js/purify.min.js"></script>
+        
+    </head>
+    <body>
+        <h1>Simple Dialogs?</h1>
+        <a href = "./customdialogs.html"> link to part 2</a>
+        <br><br>
+        <button id = "alert">Alert</button>
+        <button id = "confirm">Confirm</button>
+        <button id = "prompt">Prompt</button>
+        <button id = "safePrompt">Safer Prompt</button>
+
+        <hr>
+
+        <output id = "eventOutput"></output>
+
+        <script>
+            var myOutput = document.getElementById("eventOutput");
+
+            // alert function
+            document.getElementById("alert").addEventListener("click", function(){
+                myOutput.innerHTML = "";
+                setTimeout(() => alert("Alert! Alert! Alert!"), 0);
+            
+            });
+
+            // confirm function
+            document.getElementById("confirm").addEventListener("click", function(){
+                    myOutput.innerHTML = "";
+                    setTimeout(() =>
+                        myOutput.innerHTML = `The value returned by the Confirm 
+                            method is : ${window.confirm("do you confirm this?")}`,0);
+                }
+            );
+
+            // prompt function
+            document.getElementById("prompt").addEventListener("click", function(){
+                myOutput.innerHTML = "";
+                setTimeout(function (){
+                    let prmpt = window.prompt("What is your name?","");
+                    if(prmpt === null || prmpt.length == 0){
+                        prmpt = "User didn't enter anything"
+                    }
+                    myOutput.innerHTML = `Prompt result : ${prmpt}`
+                },0);
+            });
+
+            // safe prompt function
+            document.getElementById("safePrompt").addEventListener("click", function(){
+                myOutput.innerHTML = "";
+                
+                setTimeout(function (){
+                    let prmpt = window.prompt("What is your name?","");
+                    let clean = DOMPurify.sanitize(prmpt);
+                    console.log(clean)
+                    if(clean === null || clean.length == 0){
+                        clean = "User didn't enter anything"
+                    }
+                    myOutput.innerHTML = `Prompt result : ${clean}`
+                },0);
+            });
+
+        </script>
+        
+    </body>
+</html>

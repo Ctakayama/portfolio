@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="experiments of various tags" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>hobbies</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CM5C9F18C"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CM5C9F18C');
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+            <nav class = "navbar">
+                <!-- hamburger  -->
+                <input id="nav-check" type="checkbox">
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id = "menu">
+                    <a href="index.html"><b>Cole Takayama</b></a>
+                    <a href="hobbies.html">hobbies</a>
+                    <a href="projects.html">projects</a>
+                    <a href="contact.html">contact</a>
+                    <a href="experiment.html">experiment</a>
+                    <a href="styledcrud.html">blog</a>
+                </div>
+            </nav>
+        </header>
+       
+        <input id = "lock-check" type="checkbox">
+        <!-- Icons Used From iconmonstr.com -->
+        <img id ="lock-icon" src="./images/iconmonstr-lock-thin.svg" alt = "Lock icon" >
+        <div id = "lock-room">
+            <br>
+            <span> audio check:</span><br>
+            <audio controls>
+                <source src="./audio/Earth.mp3" type="audio/mpeg">
+            Your browser cannot play this track!
+            </audio><br>
+            <div>
+                using <code>iframe</code> tag:
+            </div><br>
+            <iframe src="https://thispersondoesnotexist.com/">
+            </iframe><br>
+
+            <label>Choose your favorite color</label>
+            <input list="color">
+
+            <datalist id="color">
+            <option value="red">
+            <option value="green">
+            <option value="blue">
+            </datalist> <br>
+
+            <template>
+                <p>This is a hidden piece of text if you don't use JS</p>
+            </template>
+
+            <canvas id = "canvas" width = "200" height = "100" > 
+            </canvas> <br>
+
+            <button type="button">Click for nothing to happen</button>
+
+            <section id = "5facts">
+            <h1>5 Facts</h1>
+            <ol>
+                <li>I am left-handed</li>
+                <li>My favorite food is curry</li>
+                <li>My last name, <Strong>Takayama</Strong>, originates from a rural city in Japan</li>
+                <li>I have never left the United States of America</li>
+                <li>My favorite book is <i>Catch-22</i> by Joseph Heller</li>
+            </ol>
+            </section>
+            <svg width="200" height="50">
+                <circle cx="25" cy="25" r="20" stroke="black" stroke-width="1" fill="white" fill-opacity="0.0" />
+                <circle cx="75" cy="25" r="20" stroke="black" stroke-width="2" fill="white" fill-opacity="0.0" />
+                <circle cx="125" cy="25" r="20" stroke="black" stroke-width="3" fill="white" fill-opacity="0.0" />
+                <circle cx="175" cy="25" r="20" stroke="black" stroke-width="4" fill="white" fill-opacity="0.0" />
+            </svg>
+        </div>
+        <footer>
+            <hr>
+            © 2021 Cole Takayama <br>
+
+            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
+            <code> made with pure HTML & CSS </code> 
+            <br>
+        </footer>
+
+        <script>
+            var c = document.getElementById("canvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FFFFF";
+            ctx.fillRect(50, 50, 50, 50);
+        </script>
+    </body>
+
+</html>

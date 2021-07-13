@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="HW5 page for CSE134B" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>methodtest</title>
+        <link rel="stylesheet" href="./styles/methodtest.css">
+    </head>
+    <body>
+        <section id = "form-container">
+            <form 
+                id = "my_form"
+                accept-charset = "UTF-8"
+                autocomplete = "off">
+                
+                <!-- hidden id value -->
+                <input name = "id" id = "id" type = "hidden" value = "1234">
+
+                <!-- article title -->
+                <label for="article_name">Article Name</label>
+                <input name = "article_name" id = "article_name"
+                    type = "text" value = "Article Name">
+                    
+                <!-- article body -->
+                <label for="article_body">Article Body</label>
+                <textarea form = "my_form" id = "article_body" 
+                    name = "article_body" type = "text" 
+                    cols = "30" rows = "2">Article body</textarea>
+                
+                <!-- hidden date value -->
+                <input name = "date" type = "hidden" id = "date">
+
+                <button type = "button" id = "postBtn">postBtn</button>
+                <button type = "button" id = "getBtn">getBtn</button>
+                <button type = "button" id = "putBtn">putBtn</button>
+                <button type = "button" id = "deleteBtn">deleteBtn</button>
+                <!-- <button type = "submit" formaction="https://httpbin.org/get" id = "getBtn">getBtn</button> -->
+
+                <p>Response:</p>
+                <output name = "response" id = "response">
+                    <textarea id="out" cols="80" rows="10" readonly></textarea>
+                </output>
+            </form>
+        </section>
+        
+    </body>
+    <script>
+        window.onload = function () {
+            document.getElementById('date').value = new Date().toLocaleDateString('en-US');
+        }
+    </script>
+    <script type = "module">
+        import * as Module from './js/methodtest.js';
+        document.getElementById('postBtn').addEventListener('click', Module.postRequest);
+        document.getElementById('getBtn').addEventListener('click', Module.getRequest);
+        document.getElementById('putBtn').addEventListener('click', Module.putRequest);
+        document.getElementById('deleteBtn').addEventListener('click', Module.deleteRequest);
+    </script>
+</html>

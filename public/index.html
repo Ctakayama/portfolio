@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="Home page for web portfolio" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>home</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CM5C9F18C"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CM5C9F18C');
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+
+            <nav class = "navbar">
+                <label style = "display: none;">hamburger
+                <input type="checkbox"></label>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id = "menu">
+                    <a href="index.html"><b>Cole Takayama</b></a>
+                    <a href="hobbies.html">hobbies</a>
+                    <a href="projects.html">projects</a>
+                    <a href="contact.html">contact</a>
+                </div>
+
+            </nav>
+        </header>
+        <div class = "flex-container">
+            <div class ="flex-top">
+            </div>
+            <section id = "about">
+                <h1>hey</h1>
+                
+                <figure>
+                    <picture>
+                        <source srcset="./images/fotosmall.webp" media="(max-width: 480px)">
+                        <source srcset="./images/fotolarge.webp">
+                        <img src="./images/fotosmall.webp" alt = "ProfilePic" 
+                            style = "width:100%; height:auto; max-width:800px; text-align: center;" width = "500" height ="400">
+                    </picture>
+       
+                
+            </section>
+            <div class ="flex-bot">
+                <!-- Icons Used From iconmonstr.com -->
+                <div class = "social-links">
+                    <a href = "https://www.facebook.com/cole.takayama/">
+                        <img src="./images/iconmonstr-facebook-6.svg" alt = "Facebook Logo" width = "50" height="50">
+                    </a>
+                    <a href = "https://www.instagram.com/cole_takayama/">
+                        <img src="./images/iconmonstr-instagram-11.svg" alt = "Instagram Logo" width = "50" height="50">
+                    </a>
+                    <a href = "https://www.linkedin.com/in/cole-takayama/">
+                        <img src="./images/iconmonstr-linkedin-3.svg" alt = "LinkedIn Logo" width = "50" height="50">
+                    </a>
+                    <a href = "https://www.youtube.com/gibberrish">
+                        <img src="./images/iconmonstr-youtube-6.svg" alt = "YouTube Logo" width = "50" height="50">
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <footer>
+            <hr>
+            © 2021 Cole Takayama <br>
+
+            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
+            <code> made with pure HTML & CSS </code> 
+            <br>
+        </footer>
+        
+
+    </body>
+
+</html>

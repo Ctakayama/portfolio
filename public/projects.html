@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="list of projects done by Cole Takayama" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>projects</title>
+        <link rel="stylesheet" href="./styles/main.css">
+
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CM5C9F18C"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CM5C9F18C');
+        </script>
+    </head>
+
+    <body>
+        <header>
+
+            <nav class = "navbar">
+                <!-- hamburger  -->
+                <label style = "display: none;">hamburger
+                <input type="checkbox"></label>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id = "menu">
+                    <a href="index.html"><b>Cole Takayama</b></a>
+                    <a href="hobbies.html">hobbies</a>
+                    <a href="projects.html">projects</a>
+                    <a href="contact.html">contact</a>
+                </div>
+
+            </nav>
+        </header>
+
+        
+        <h1 class = "page-title">projects</h1>
+        <div id = "project-grid">
+            <div id="project-1">
+                <span class = "raptor"></span>
+                <h2>Velocity Raptor</h2>
+                <p>Chrome Extension that syncs with Github to keep track of your repo tasks. Everytime you complete a task, your Velocity Raptor runs faster!</p>
+                <details>
+                    <summary>Tools Used</summary>
+                    <p>HTML, CSS, JavaScript, Node js</p>
+                </details>
+            </div>
+
+            <div id="project-2">
+                <picture>
+                    <source srcset="./images/coloqialsmall.webp" media="(max-width: 480px)">
+                    <source srcset="./images/coloqiallarge.webp">
+                    <img src="./image/coloqiallarge.webp" alt = "Coloqial" 
+                        style = "width:30%; height:auto;" width = "300" height="200">
+                </picture>
+                <h2>Coloqial.com</h2>
+                <p>E-commerce site designed to sell clothes designed by local San Diego artists.</p>
+                <details>
+                    <summary>Tools Used</summary>
+                    <p>HTML, CSS, JavaScript, Liquid, Shopify</p>
+                </details>
+            </div>
+
+            <div id="project-3">
+                <picture>
+                    <source srcset="./images/graphsmall.webp" media="(max-width: 480px)">
+                    <source srcset="./images/graph.webp">
+                    <img src="./images/graph.webp" alt = "Coloqial" 
+                        style = "width:30%; height:auto;" width = "300" height="200">
+                </picture>
+                <h2>Grades & Alcohol Consumption Case Study</h2>
+                <p>Study to determine the correlation between students' grades and quarterly alcohol intake.</p>
+                <details>
+                    <summary>Tools Used</summary>
+                    <p>Python, Pandas</p>
+                </details>
+            </div>
+        </div>
+
+        <footer>
+            <hr>
+            © 2021 Cole Takayama <br>
+
+            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
+            <code> made with pure HTML & CSS </code> 
+            <br>
+        </footer>
+    </body>
+
+</html>

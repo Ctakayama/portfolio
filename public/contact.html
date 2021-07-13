@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="description" content="contact info for Cole Takayama" />
+        <meta name="keywords" content="HTML, CSS, JavaScript" />
+        <meta name="author" content="Cole Takayama" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>home</title>
+        <link rel="stylesheet" href="./styles/main.css">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1CM5C9F18C"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1CM5C9F18C');
+        </script>
+
+    </head>
+
+    <body>
+        <header>
+
+            <nav class = "navbar">
+                <!-- hamburger  -->
+                <label style = "display: none;">hamburger
+                <input type="checkbox"></label>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div id = "menu">
+                    <a href="index.html"><b>Cole Takayama</b></a>
+                    <a href="hobbies.html">hobbies</a>
+                    <a href="projects.html">projects</a>
+                    <a href="contact.html">contact</a>
+                </div>
+
+            </nav>
+        </header>
+
+        <h1 class = "page-title">contact</h1>
+        <div id = "contact-container">
+
+        
+        <p>email: <span class = "myEmail">ctakayam@ucsd.edu</span></p>
+        <form id = "contactForm">
+            <fieldset>
+                <legend>Email Form:</legend>
+                <label>Your Name:
+                <input type="text"></label><br>
+                <label>Your Email:
+                <input type="text"></label><br>
+                <label> What is your role?
+                <select>
+                    <optgroup label ="Casual">
+                        <option>Friend</option>
+                        <option>Family</option>
+                        <option>Peer</option>
+                    </optgroup>
+                    <optgroup label ="Professional">
+                        <option>Recruiter</option>
+                        <option>Co-Worker</option>
+                        <option>Manager</option>
+                    </optgroup>
+                </select></label><br>
+                <label> Message
+                <textarea rows="4" cols="50">
+                </textarea></label><br>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        </div>
+        <footer>
+            <hr>
+            © 2021 Cole Takayama <br>
+
+            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
+            <code> made with pure HTML & CSS </code> 
+            <br>
+        </footer>
+    </body>
+
+</html>
