@@ -14,7 +14,7 @@ class Header extends HTMLElement {
                         <a href="index.html"><b>Cole Takayama</b></a>
                         <a href="hobbies.html">hobbies</a>
                         <a href="projects.html">projects</a>
-                        <a href="contact.html">contact</a>
+                        <a href="../pdfs/ColeTakayamaResume2021.pdf">résumé</a>
                     </div>
 
                 </nav>
