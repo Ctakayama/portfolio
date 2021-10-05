@@ -19,6 +19,8 @@
         </script>
 
         <script src="components/header.js" type="text/javascript" defer></script>
+        <script src="components/footer.js" type="text/javascript" defer></script>
+
 
     </head>
 
@@ -30,8 +32,8 @@
         <div id = "project-grid">
             <div id="project-1">
                 <span class = "raptor"></span>
-                <h2>Velocity Raptor</h2>
-                <p>Chrome Extension that syncs with Github to keep track of your repo tasks. Everytime you complete a task, your Velocity Raptor runs faster!</p>
+                <a href = "https://github.com/Ctakayama/VelocityRaptor"><h2>Velocity Raptor</h2></a>
+                <p>A Google Chrome extension that uses the GitHub API to track ongoing tasks in each of the user’s repositories. Project lead/UI designer.</p>
                 <details>
                     <summary>Tools Used</summary>
                     <p>HTML, CSS, JavaScript, Node js</p>
@@ -40,16 +42,16 @@
 
             <div id="project-2">
                 <picture>
-                    <source srcset="./images/coloqialsmall.webp" media="(max-width: 480px)">
-                    <source srcset="./images/coloqiallarge.webp">
-                    <img src="./image/coloqiallarge.webp" alt = "Coloqial" 
+                    <source srcset="./images/peruse.png" media="(max-width: 480px)">
+                    <source srcset="./images/peruse.png">
+                    <img src="./images/peruse.png" alt = "peruse" 
                         style = "width:30%; height:auto;" width = "300" height="200">
                 </picture>
-                <h2>Coloqial.com</h2>
-                <p>E-commerce site designed to sell clothes designed by local San Diego artists.</p>
+                <a href = "https://github.com/Ctakayama/peruse"><h2>Peruse E-Reader</h2></a>
+                <p>E-reader web app that lets you stay focused while you read online. Technical Lead/Web App developer.</p>
                 <details>
                     <summary>Tools Used</summary>
-                    <p>HTML, CSS, JavaScript, Liquid, Shopify</p>
+                    <p>javascript, express/node.js, npm, handlebars.js, ocrad.js, html, css, heroku</p>
                 </details>
             </div>
 
@@ -60,8 +62,8 @@
                     <img src="./images/graph.webp" alt = "Coloqial" 
                         style = "width:30%; height:auto;" width = "300" height="200">
                 </picture>
-                <h2>Grades & Alcohol Consumption Case Study</h2>
-                <p>Study to determine the correlation between students' grades and quarterly alcohol intake.</p>
+                <a href = "https://github.com/Ctakayama/Grades-and-Drinks"><h2>Grades & Alcohol Consumption Case Study</h2></a>
+                <p>Study to determine the correlation between students' grades and quarterly alcohol intake. Data Analyst/Data Visualizer.</p>
                 <details>
                     <summary>Tools Used</summary>
                     <p>Python, Pandas</p>
@@ -69,14 +71,7 @@
             </div>
         </div>
 
-        <footer>
-            <hr>
-            © 2021 Cole Takayama <br>
-
-            <cite>Social Media Icons</cite> by <a href="https://iconmonstr.com/">iconmonstr.com</a> <br>
-            <code> made with pure HTML & CSS </code> 
-            <br>
-        </footer>
+        <footer-component></footer-component>
     </body>
 
 </html>
